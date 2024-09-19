@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CNPJ</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Consulta CNPJ</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center">Consultar CNPJ</h2>
+                <form id="cnpjForm">
+                    <div class="mb-3">
+                        <label for="cnpjInput" class="form-label">Digite o CNPJ</label>
+                        <input type="text" class="form-control" id="cnpjInput" placeholder="Ex: 00000000000000" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Consultar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="resultContainer" style="display: none;">
+            <div class="col-md-8 offset-md-2">
+                <h3>Informações da Empresa</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" id="companyName"></h5>
+                        <p><strong>CNPJ:</strong> <span id="companyCnpj"></span></p>
+                        <p><strong>Status:</strong> <span id="companyStatus"></span></p>
+                        <p><strong>Capital Social:</strong>   <span id="companyEquity"></span> </p>
+                        <p><strong>Natureza Jurídica:</strong> <span id="companyNature"></span></p>
+                        <p><strong>Atividade Principal:</strong> <span id="companyActivity"></span></p>
+                        <p><strong>Endereço:</strong> <span id="companyAddress"></span></p>
+                        <p><strong>Telefone:</strong> <span id="companyPhone"></span></p>
+                        <p><strong>Email:</strong> <span id="companyEmail"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
